@@ -2,7 +2,7 @@ import smtplib
 
 def sendMail():
     try:
-        from = "xyz@gmail.com"
+        fromuser = "xyz@gmail.com"
         to = "xyz@gmail.com"
         username = "xyz@gmail.com"
         password = "**********"
@@ -11,7 +11,7 @@ def sendMail():
         server.starttls()
         server.login(username, password)
         msg = "Hello! Welcome"
-        server.sendmail(from, to, msg)
+        server.sendmail(fromuser, to, msg)
         server.close()
         print("mail sent successfuly")
     except Exception as e:
