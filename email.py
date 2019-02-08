@@ -1,5 +1,5 @@
 import smtplib
-from file.constants import *
+from mailconstants import *
 from email.mime.text import MIMEText
 
 def sendMail():
