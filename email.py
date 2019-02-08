@@ -4,15 +4,12 @@ from email.mime.text import MIMEText
 
 def sendMail():
     try:
-        name = username
-        passw = password
-
         server = smtplib.SMTP('smtp.gmail.com:587')
         server.ehlo()
         server.starttls()
-        server.login(name, passw)
+        server.login(username, password)
         msg = "Hello! Welcome"
-        server.sendmail(name, name, msg)
+        server.sendmail(username, username, msg)
         server.close()
         print("mail sent successfuly")
     except Exception as e:
